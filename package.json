@@ -1,0 +1,23 @@
+{
+	"name": "eslint-config-jke",
+	"version": "0.1.0",
+	"description": "My opinionated .eslintrc as an extensible shared config",
+	"keywords": [
+		"eslint",
+		"eslintconfig"
+	],
+	"homepage": "https://github.com/joakimkemeny/eslint-config-jke#readme",
+	"bugs": {
+		"url": "https://github.com/joakimkemeny/eslint-config-jke/issues"
+	},
+	"license": "Apache-2.0",
+	"main": "index.js",
+	"author": "Joakim Kemeny",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joakimkemeny/eslint-config-jke.git"
+	},
+	"peerDependencies": {
+		"eslint": "2.x"
+	}
+}
