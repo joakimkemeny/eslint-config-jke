@@ -11,6 +11,10 @@
 		"url": "https://github.com/joakimkemeny/eslint-config-jke/issues"
 	},
 	"license": "Apache-2.0",
+	"files": [
+		"index.js",
+		"react.js"
+	],
 	"main": "index.js",
 	"author": "Joakim Kemeny",
 	"repository": {
@@ -18,6 +22,6 @@
 		"url": "https://github.com/joakimkemeny/eslint-config-jke.git"
 	},
 	"peerDependencies": {
-		"eslint": "2.x"
+		"eslint": ">=2.13.1"
 	}
 }

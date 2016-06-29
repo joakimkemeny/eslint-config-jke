@@ -31,6 +31,7 @@ Minor versions should not break your build either. Minor versions are going to b
 Major versions will probably break your build. All rules that were previously added as warnings in minor versions will be turned into errors and rule definitions can change. All changes will be documented, and motivated, in a changelog to make updates easier.
 
 ## License
+Copyright 2016 Joakim Kemeny
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
