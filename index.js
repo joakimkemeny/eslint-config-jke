@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
 
 	parserOptions: {
@@ -11,6 +13,7 @@ module.exports = {
 	},
 
 	globals: {},
+
 	rules: {
 
 		// Possible Errors

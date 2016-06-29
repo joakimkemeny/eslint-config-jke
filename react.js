@@ -1,5 +1,8 @@
+'use strict';
+var path = require('path');
+
 module.exports = {
-	extends: 'jke',
+	extends: path.join(__dirname, 'index.js'),
 
 	parserOptions: {
 		ecmaFeatures: {

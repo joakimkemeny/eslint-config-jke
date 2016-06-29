@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '6.1'
+deploy:
+  provider: npm
+  email: joakim@kemeny.se
+  api_key:
+    secure: d6o5q5rg06Q2NCMeP4T1XsL7pNbT+fZIJVjVmncd87m/pVrWvA+5Jo+JxM9N6ULB4xBh8qy/wVAVVU8XrR5vuyt/S0mqzg5Wccn8REEna6Lnkn6MPilYUAQhMG6KaW15UwqKClrjfAb1MY3hAAIEPr6arup8KZOb+AKWd66F2+nhhFeiH0rgxxNKVz4IZuHjRLtrC6T2qcubUhsLBdHgJUDWgtRQgOB9ekCewMTYq/6Owd+J/axleusnBmGwaPxyQmwl3brMLQfucgNPpSC3GNt5gUx/pLKf5Z5tmRBthBD6meq3vmFxSdrk2Q0kS3mucjFBtDh5p6luVpMM0Q3Z366tdfpXatAO9GjEYqrXVmSz2hDrH1s5Afb9hxm6qUySTcqjCUSDYJI1dvLgyasGTjxox0jSvxpt309cgwUYze8/UV86WdKgXvqtxH//AtRnORvO7bB/51vF+Mq3cxGg2zW4n85X4TkJMxlVadSckoFP/DzLwpyrIX/29OLsX1pnR2wBL5afH/sf3rjDfGYu3PQnBfLiz41fb6kZ18BAXBPMs3kB8MemnHcPPfoMVrSJedoU2/mbUxF82yofm+L+70MPDiRExPARw0VeU7WQ3pNI4Zo/WLMFAa47e/lC6CntYx+fxvY227zDas6vbAztVDQMmlsi1GRquD+LiPB0O+M=
+  on:
+    tags: true
+    repo: joakimkemeny/eslint-config-jke
+    branch: master
