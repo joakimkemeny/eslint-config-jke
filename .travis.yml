@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-- '6.1'
+node_js: 6.1
 deploy:
   provider: npm
   email: joakim@kemeny.se
