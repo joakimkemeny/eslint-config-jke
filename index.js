@@ -133,6 +133,35 @@ module.exports = {
 		'yoda': 'off',
 
 		// Strict Mode
-		'strict': ['error', 'safe']
+		'strict': ['error', 'safe'],
+
+		// Variables
+		'init-declarations': 'off',
+		'no-catch-shadow': 'error',
+		'no-delete-var': 'error',
+		'no-label-var': 'error',
+		'no-restricted-globals': 'off',
+		'no-shadow': [
+			'error', {
+				builtinGlobals: true,
+				hoist: 'all'
+			}
+		],
+		'no-shadow-restricted-names': 'error',
+		'no-undef': [
+			'error', {
+				typeof: true
+			}
+		],
+		'no-undef-init': 'error',
+		'no-undefined': 'error',
+		'no-unused-vars': [
+			'error', {
+				vars: 'all',
+				args: 'after-used',
+				caughtErrors: 'all'
+			}
+		],
+		'no-use-before-define': ['error', 'nofunc']
 	}
 };
