@@ -1,17 +1,23 @@
 # eslint-config-jke
-This package provides my opinionated `.eslintrc` as an extensible shared config.
+This project provides my opinionated `.eslintrc` as an extensible shared config.
 
 ## Usage
-This package provides two ESLint configurations. 
+This project provides three ESLint configurations. 
 
-### eslint-config-jke
-The default set of rules.
+### eslint-config-jke/browser
+A set of rules to use in a browser environment.
 
 1. `npm install --save-dev eslint eslint-config-jke`
-2. Add `"extends": "jke"` to your `.eslintrc`
+2. Add `"extends": "jke/browser"` to your `.eslintrc`
+
+### eslint-config-jke/node
+A set of rules to use in a Node environment.
+
+1. `npm install --save-dev eslint eslint-config-jke`
+2. Add `"extends": "jke/node"` to your `.eslintrc`
 
 ### eslint-config-jke/react
-Extends the default set of rules with React and JSX rules.
+Extends the browser set of rules with React and JSX rules.
 
 1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-react`
 2. Add `"extends": "jke/react"` to your `.eslintrc`

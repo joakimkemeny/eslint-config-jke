@@ -4,8 +4,8 @@ import eslint from 'eslint';
 import isPlainObj from 'is-plain-obj';
 import tempWrite from 'temp-write';
 
-describe('Index', () => {
-	const conf = require('../');
+describe('Node', () => {
+	const conf = require('../node');
 
 	it('should be a valid config', () => {
 		expect(isPlainObj(conf)).to.equal(true);

@@ -1,4 +1,4 @@
-/* eslint-env node, mocha */
+/* eslint-env mocha */
 import {expect} from 'chai';
 import eslint from 'eslint';
 import isPlainObj from 'is-plain-obj';
@@ -6,7 +6,7 @@ import tempWrite from 'temp-write';
 
 describe('React', () => {
 	const conf = require('../react');
-	
+
 	it('should be a valid config', () => {
 		expect(isPlainObj(conf)).to.equal(true);
 		expect(isPlainObj(conf.rules)).to.equal(true);

@@ -22,7 +22,7 @@
 		"url": "https://github.com/joakimkemeny/eslint-config-jke.git"
 	},
 	"scripts": {
-		"lint": "eslint -c index.js .",
+		"lint": "eslint -c node.js .",
 		"test": "mocha --compilers js:babel-register --recursive ./test/**/*-spec.js && npm run lint"
 	},
 	"devDependencies": {
