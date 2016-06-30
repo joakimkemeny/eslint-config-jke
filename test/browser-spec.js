@@ -1,4 +1,5 @@
 /* eslint-env mocha */
+// noinspection JSUnresolvedVariable (WebStorm warning)
 import {expect} from 'chai';
 import eslint from 'eslint';
 import isPlainObj from 'is-plain-obj';
@@ -13,12 +14,12 @@ describe('Browser', () => {
 	});
 
 	it('should trigger an error for violation', () => {
-		const linter = new eslint.CLIEngine({
+		const engine = new eslint.CLIEngine({
 			useEslintrc: false,
 			configFile: tempWrite.sync(JSON.stringify(conf))
 		});
 		const input = 'console.log("text")';
-		const results = linter.executeOnText(input).results[0].messages;
+		const results = engine.executeOnText(input, 'input').results[0].messages;
 		expect(results[0].ruleId).to.equal('no-console');
 	});
 });
