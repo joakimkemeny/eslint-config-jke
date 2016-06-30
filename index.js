@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
 
 	parserOptions: {
@@ -133,6 +131,9 @@ module.exports = {
 		'radix': ['error', 'always'],
 		'vars-on-top': 'error',
 		'wrap-iife': ['error', 'inside'],
-		'yoda': 'off'
+		'yoda': 'off',
+
+		// Strict Mode
+		'strict': ['error', 'safe']
 	}
 };
