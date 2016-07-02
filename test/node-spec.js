@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-// noinspection JSUnresolvedVariable (WebStorm)
-import { expect } from "chai"
 import conf from "../node"
 import eslint from "eslint"
+// noinspection JSUnresolvedVariable (WebStorm)
+import { expect } from "chai"
 import isPlainObj from "is-plain-obj"
 import tempWrite from "temp-write"
 
