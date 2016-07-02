@@ -1,17 +1,25 @@
-# eslint-config-jke
-This package provides my opinionated `.eslintrc` as an extensible shared config.
+# JKE ESLint Config 
+[![NPM version](https://img.shields.io/npm/v/eslint-config-jke.svg)](https://www.npmjs.com/package/eslint-config-jke) [![Build status](https://img.shields.io/travis/joakimkemeny/eslint-config-jke/master.svg)](https://travis-ci.org/joakimkemeny/eslint-config-jke)
+
+This project provides my opinionated `.eslintrc` as an extensible shared config.
 
 ## Usage
-This package provides two ESLint configurations. 
+This project provides three ESLint configurations. 
 
-### eslint-config-jke
-The default set of rules.
+### eslint-config-jke/browser
+A set of rules to use in a browser environment.
 
 1. `npm install --save-dev eslint eslint-config-jke`
-2. Add `"extends": "jke"` to your `.eslintrc`
+2. Add `"extends": "jke/browser"` to your `.eslintrc`
+
+### eslint-config-jke/node
+A set of rules to use in a Node environment.
+
+1. `npm install --save-dev eslint eslint-config-jke`
+2. Add `"extends": "jke/node"` to your `.eslintrc`
 
 ### eslint-config-jke/react
-Extends the default set of rules with React and JSX rules.
+Extends the browser set of rules with React and JSX rules.
 
 1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-react`
 2. Add `"extends": "jke/react"` to your `.eslintrc`
@@ -38,3 +46,23 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 <http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+## Dependencies
+This project relies on the work of great people who have created the following dependencies. 
+
+### Development dependencies
+[![devDependency status](https://img.shields.io/david/dev/joakimkemeny/eslint-config-jke/master.svg)](https://david-dm.org/joakimkemeny/eslint-config-jke/master#info=devDependencies)
+
+- [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015): Used to configure Babel to understand ES2015
+- [babel-register](https://www.npmjs.com/package/babel-register): Used by Mocha to use Babel to understand ES2015
+- [chai](https://www.npmjs.com/package/chai): Used by Mocha to make assertions in the tests
+- [eslint](https://www.npmjs.com/package/eslint): Used to run this project
+- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react): Used to extend ESLint with rules for React
+- [is-plain-obj](https://www.npmjs.com/package/is-plain-obj): Used in tests to check the configuration
+- [mocha](https://www.npmjs.com/package/mocha): Used to test the configuration
+- [temp-write](https://www.npmjs.com/package/temp-write): Used in tests to write temporary files
+
+### Peer dependencies
+[![peerDependency status](https://img.shields.io/david/peer/joakimkemeny/eslint-config-jke/master.svg)](https://david-dm.org/joakimkemeny/eslint-config-jke/master#info=peerDependencies)
+
+- [eslint](https://www.npmjs.com/package/eslint): Used to run this project

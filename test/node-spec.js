@@ -1,12 +1,12 @@
 /* eslint-env mocha */
-import conf from "../"
+import conf from "../node"
 import eslint from "eslint"
 // noinspection JSUnresolvedVariable (WebStorm)
 import { expect } from "chai"
 import isPlainObj from "is-plain-obj"
 import tempWrite from "temp-write"
 
-describe("Index", () => {
+describe("Node", () => {
 
 	it("should be a valid config", () => {
 		expect(isPlainObj(conf)).to.equal(true)
