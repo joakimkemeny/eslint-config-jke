@@ -1,7 +1,7 @@
-var path = require('path');
+var path = require("path")
 
 module.exports = {
-	extends: path.join(__dirname, 'browser.js'),
+	extends: path.join(__dirname, "browser.js"),
 
 	parserOptions: {
 		ecmaFeatures: {
@@ -9,7 +9,11 @@ module.exports = {
 		}
 	},
 
-	plugins: ['react'],
+	plugins: ["react"],
 
-	rules: {}
-};
+	rules: {
+
+		// Stylistic Issues
+		"jsx-quotes": ["error", "prefer-double"]
+	}
+}
