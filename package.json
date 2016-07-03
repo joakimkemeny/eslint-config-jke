@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-jke",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "My opinionated .eslintrc as an extensible shared config",
 	"keywords": [
 		"eslint",
@@ -12,7 +12,9 @@
 	},
 	"license": "Apache-2.0",
 	"files": [
+		"browser.js",
 		"index.js",
+		"node.js",
 		"react.js"
 	],
 	"main": "index.js",
