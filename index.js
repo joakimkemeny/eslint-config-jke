@@ -37,7 +37,7 @@ module.exports = {
 		"no-irregular-whitespace": "error",
 		"no-negated-in-lhs": "error",
 		"no-obj-calls": "error",
-		"no-prototype-builtins": "error",
+		"no-prototype-builtins": "off",
 		"no-regex-spaces": "error",
 		"no-sparse-arrays": "error",
 		"no-unexpected-multiline": "error",
@@ -144,7 +144,7 @@ module.exports = {
 		"func-names": "off",
 		"func-style": ["error", "declaration", { allowArrowFunctions: true }],
 		"id-blacklist": ["error", "callback", "cb", "data", "e", "err"],
-		"id-length": ["error", { min: 3, properties: "always" }],
+		"id-length": ["error", { exceptions: ["id"], min: 3, properties: "always" }],
 		"id-match": "off",
 		"indent": ["error", "tab", { SwitchCase: 1 }],
 		"key-spacing": ["error", { afterColon: true, beforeColon: false, mode: "strict" }],
@@ -206,7 +206,7 @@ module.exports = {
 		"wrap-regex": "off",
 
 		// ECMAScript 6
-		"arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: true }],
+		"arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: false }],
 		"arrow-parens": ["error", "always"],
 		"arrow-spacing": ["error", { after: true, before: true }],
 		"constructor-super": "error",
@@ -236,7 +236,7 @@ module.exports = {
 		"rest-spread-spacing": ["error", "never"],
 		"sort-imports": [
 			"error",
-			{ ignoreCase: false, ignoreMemberSort: false, memberSyntaxSortOrder: ["none", "all", "multiple", "single"] }
+			{ ignoreCase: true, ignoreMemberSort: false, memberSyntaxSortOrder: ["none", "all", "multiple", "single"] }
 		],
 		"template-curly-spacing": ["error", "never"],
 		"yield-star-spacing": ["error", "after"]

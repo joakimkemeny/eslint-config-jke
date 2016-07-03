@@ -1,4 +1,4 @@
-# JKE ESLint Config 
+# eslint-config-jke 
 [![NPM version](https://img.shields.io/npm/v/eslint-config-jke.svg)](https://www.npmjs.com/package/eslint-config-jke) [![Build status](https://img.shields.io/travis/joakimkemeny/eslint-config-jke/master.svg)](https://travis-ci.org/joakimkemeny/eslint-config-jke)
 
 This project provides my opinionated `.eslintrc` as an extensible shared config.
