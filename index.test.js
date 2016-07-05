@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-import conf from "../"
+import conf from "./"
 import eslint from "eslint"
 // noinspection JSUnresolvedVariable (WebStorm)
 import { expect } from "chai"
