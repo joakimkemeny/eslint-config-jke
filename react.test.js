@@ -1,12 +1,11 @@
 /* eslint-env mocha */
-import conf from "../browser"
+import conf from "./react"
 import eslint from "eslint"
-// noinspection JSUnresolvedVariable (WebStorm)
 import { expect } from "chai"
 import isPlainObj from "is-plain-obj"
 import tempWrite from "temp-write"
 
-describe("Browser", () => {
+describe("React", () => {
 
 	it("should be a valid config", () => {
 		expect(isPlainObj(conf)).to.equal(true)

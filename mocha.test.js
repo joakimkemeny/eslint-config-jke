@@ -1,12 +1,11 @@
 /* eslint-env mocha */
-import conf from "../node"
+import conf from "./mocha"
 import eslint from "eslint"
-// noinspection JSUnresolvedVariable (WebStorm)
 import { expect } from "chai"
 import isPlainObj from "is-plain-obj"
 import tempWrite from "temp-write"
 
-describe("Node", () => {
+describe("Mocha", () => {
 
 	it("should be a valid config", () => {
 		expect(isPlainObj(conf)).to.equal(true)
@@ -18,8 +17,8 @@ describe("Node", () => {
 			useEslintrc: false,
 			configFile: tempWrite.sync(JSON.stringify(conf))
 		})
-		const input = "console.log(1)"
+		const input = "it('should work', function () {})"
 		const results = engine.executeOnText(input, "input").results[0].messages
-		expect(results[0].ruleId).to.equal("no-console")
+		expect(results[0].ruleId).to.equal("mocha/no-global-tests")
 	})
 })

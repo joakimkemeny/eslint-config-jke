@@ -13,11 +13,15 @@ module.exports = {
 
 	rules: {
 
+		// Possible Errors
+		// Workaround for multiline JSX.
+		"no-extra-parens": ["error", "functions"],
+
 		// Stylistic Issues
 		"jsx-quotes": ["error", "prefer-double"],
 
 		// React
-		"react/display-name": ["error", { ignoreTranspilerName: true }],
+		"react/display-name": "off",
 		"react/forbid-prop-types": "off",
 		"react/no-comment-textnodes": "error",
 		"react/no-danger": "error",
@@ -49,7 +53,7 @@ module.exports = {
 		"react/jsx-curly-spacing": ["error", "always", { allowMultiline: true, spacing: { objectLiterals: "always" } }],
 		"react/jsx-equals-spacing": ["error", "never"],
 		"react/jsx-filename-extension": ["error", { extensions: [".js"] }],
-		"react/jsx-first-prop-new-line": ["error", "never"],
+		"react/jsx-first-prop-new-line": ["error", "multiline"],
 		"react/jsx-handler-names": ["error", { eventHandlerPrefix: "handle", eventHandlerPropPrefix: "on" }],
 		"react/jsx-indent": ["error", "tab"],
 		"react/jsx-indent-props": ["error", "tab"],
