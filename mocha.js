@@ -5,6 +5,7 @@ module.exports = {
 
 		// Mocha
 		"mocha/no-exclusive-tests": "error",
+		"mocha/no-mocha-arrows": "off",
 		"mocha/no-skipped-tests": "error",
 		"mocha/no-pending-tests": "error",
 		"mocha/handle-done-callback": "error",
