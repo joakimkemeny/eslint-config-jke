@@ -178,6 +178,7 @@ module.exports = {
 		"no-plusplus": "error",
 		"no-restricted-syntax": "off",
 		"no-spaced-func": "error",
+		"no-tabs": "off",
 		"no-ternary": "off",
 		"no-trailing-spaces": ["error", { skipBlankLines: false }],
 		"no-underscore-dangle": "error",
