@@ -23,12 +23,12 @@ module.exports = {
 		// React
 		"react/display-name": "off",
 		"react/forbid-prop-types": "off",
-		"react/no-comment-textnodes": "error",
 		"react/no-danger": "error",
 		"react/no-deprecated": "error",
-		"react/no-did-mount-set-state": ["error", "allow-in-func"],
+		"react/no-did-mount-set-state": ["error"],
 		"react/no-did-update-set-state": "error",
 		"react/no-direct-mutation-state": "error",
+		"react/no-find-dom-node": "error",
 		"react/no-is-mounted": "error",
 		"react/no-multi-comp": "error",
 		"react/no-render-return-value": "error",
@@ -39,13 +39,11 @@ module.exports = {
 		"react/prefer-stateless-function": "error",
 		"react/prop-types": "error",
 		"react/react-in-jsx-scope": "error",
-		"react/require-extension": ["error", { extensions: [".js"] }],
 		"react/require-optimization": "off",
 		"react/require-render-return": "error",
-		"react/self-closing-comp": ["error", { component: true, html: false }],
+		"react/self-closing-comp": ["error", { component: true, html: true }],
 		"react/sort-comp": "error",
 		"react/sort-prop-types": ["error", { callbacksLast: false, ignoreCase: true, requiredFirst: false }],
-		"react/wrap-multilines": ["error", { declaration: true, assignment: true, return: true }],
 
 		// JSX
 		"react/jsx-boolean-value": ["error", "never"],
@@ -60,14 +58,18 @@ module.exports = {
 		"react/jsx-key": "error",
 		"react/jsx-max-props-per-line": "off",
 		"react/jsx-no-bind": ["error", { allowArrowFunctions: false, allowBind: false, ignoreRefs: false }],
+		"react/jsx-no-comment-textnodes": "error",
 		"react/jsx-no-duplicate-props": ["error", { ignoreCase: false }],
 		"react/jsx-no-literals": "off",
 		"react/jsx-no-target-blank": "error",
 		"react/jsx-no-undef": "error",
 		"react/jsx-pascal-case": ["error", { allowAllCaps: false }],
-		"react/jsx-sort-props": ["error", { callbacksLast: false, ignoreCase: true, shorthandFirst: false }],
+		"react/jsx-sort-props": [
+			"error", { callbacksLast: false, ignoreCase: true, shorthandFirst: false, shorthandLast: false }
+		],
 		"react/jsx-space-before-closing": ["error", "always"],
 		"react/jsx-uses-react": "error",
-		"react/jsx-uses-vars": "error"
+		"react/jsx-uses-vars": "error",
+		"react/jsx-wrap-multilines": ["error", { declaration: true, assignment: true, return: true }]
 	}
 }
