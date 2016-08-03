@@ -1,9 +1,9 @@
 /* eslint-env mocha */
-import conf from "./react"
 import eslint from "eslint"
 import { expect } from "chai"
 import isPlainObj from "is-plain-obj"
 import tempWrite from "temp-write"
+import conf from "./react"
 
 describe("React", () => {
 

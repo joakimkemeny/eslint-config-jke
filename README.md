@@ -4,7 +4,7 @@
 This project provides my opinionated `.eslintrc` as an extensible shared config.
 
 ## Usage
-This project provides four ESLint configurations. 
+This project provides five ESLint configurations. 
 
 ### eslint-config-jke/browser
 A set of rules to use in a browser environment.
@@ -32,6 +32,15 @@ An extension to the other set of rules that adds rules for Mocha tests.
 	- `"extends": ["jke/browser", "jke/mocha"]`
 	- `"extends": ["jke/node", "jke/mocha"]`
 	- `"extends": ["jke/react", "jke/mocha"]`
+
+### eslint-config-jke/import
+An extension to the other set of rules that adds rules for import statements.
+
+1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-import`
+2. Add one of the following rows to you `.eslintrc`
+	- `"extends": ["jke/browser", "jke/import"]`
+	- `"extends": ["jke/node", "jke/import"]`
+	- `"extends": ["jke/react", "jke/import"]`
 
 ## Versioning
 Currently the project is in its initial development (as indicated by the 0.x version). This means that rule definitions can change at any time and your build may break. After the 1.0.0 release the project should be considered stable and will follow [semantic versioning](http://semver.org).
@@ -66,6 +75,7 @@ This project relies on the work of great people who have created the following d
 - [babel-register](https://www.npmjs.com/package/babel-register): Used by Mocha to use Babel to understand ES2015
 - [chai](https://www.npmjs.com/package/chai): Used by Mocha to make assertions in the tests
 - [eslint](https://www.npmjs.com/package/eslint): Used to run this project
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import): Used to extend ESLint with rules for import statements
 - [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha): Used to extend ESLint with rules for Mocha
 - [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react): Used to extend ESLint with rules for React
 - [is-plain-obj](https://www.npmjs.com/package/is-plain-obj): Used in tests to check the configuration
