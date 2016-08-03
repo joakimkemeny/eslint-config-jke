@@ -144,7 +144,7 @@ module.exports = {
 		"func-names": "off",
 		"func-style": ["error", "declaration", { allowArrowFunctions: true }],
 		"id-blacklist": ["error", "callback", "cb", "data", "e", "err"],
-		"id-length": ["error", { exceptions: ["id"], min: 3, properties: "always" }],
+		"id-length": ["error", { min: 2, properties: "always" }],
 		"id-match": "off",
 		"indent": ["error", "tab", { SwitchCase: 1 }],
 		"key-spacing": ["error", { afterColon: true, beforeColon: false, mode: "strict" }],
@@ -238,7 +238,8 @@ module.exports = {
 		"rest-spread-spacing": ["error", "never"],
 		"sort-imports": [
 			"error",
-			{ ignoreCase: true, ignoreMemberSort: false, memberSyntaxSortOrder: ["none", "all", "multiple", "single"] }
+			{ ignoreCase: true, ignoreMemberSort: false,
+				memberSyntaxSortOrder: ["none", "all", "multiple", "single"] }
 		],
 		"template-curly-spacing": ["error", "never"],
 		"yield-star-spacing": ["error", "after"]

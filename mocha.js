@@ -12,7 +12,7 @@ module.exports = {
 		"mocha/no-pending-tests": "error",
 		"mocha/no-sibling-hooks": "error",
 		"mocha/no-skipped-tests": "error",
-		"mocha/no-synchronous-tests": "error",
+		"mocha/no-synchronous-tests": "off",
 		"mocha/valid-test-description": "off",
 		"mocha/valid-suite-description": "off"
 	}

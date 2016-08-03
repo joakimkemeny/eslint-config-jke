@@ -13,6 +13,7 @@
 	"license": "Apache-2.0",
 	"files": [
 		"browser.js",
+		"import.js",
 		"index.js",
 		"mocha.js",
 		"node.js",
@@ -25,7 +26,7 @@
 		"url": "https://github.com/joakimkemeny/eslint-config-jke.git"
 	},
 	"scripts": {
-		"lint": "eslint -c node.js .",
+		"lint": "eslint .",
 		"test": "npm run test:unit && npm run lint",
 		"test:unit": "mocha --compilers js:babel-register --recursive ./**/*.test.js"
 	},
@@ -34,6 +35,7 @@
 		"babel-register": "^6.11.6",
 		"chai": "^3.5.0",
 		"eslint": "~3.2.0",
+		"eslint-plugin-import": "~1.12.0",
 		"eslint-plugin-mocha": "~4.3.0",
 		"eslint-plugin-react": "~6.0.0",
 		"is-plain-obj": "^1.1.0",
