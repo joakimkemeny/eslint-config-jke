@@ -18,7 +18,7 @@ describe("Mocha", () => {
 			configFile: tempWrite.sync(JSON.stringify(conf))
 		})
 		const input = "it('should work', function () {})"
-		const results = engine.executeOnText(input, "input").results[0].messages
+		const results = engine.executeOnText(input, "input", true).results[0].messages
 		expect(results[0].ruleId).to.equal("mocha/no-global-tests")
 	})
 })

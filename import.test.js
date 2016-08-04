@@ -18,7 +18,7 @@ describe("Import", () => {
 			configFile: tempWrite.sync(JSON.stringify(conf))
 		})
 		const input = "require('unknown')"
-		const results = engine.executeOnText(input, "input").results[0].messages
+		const results = engine.executeOnText(input, "input", true).results[0].messages
 		expect(results[0].ruleId).to.equal("import/no-extraneous-dependencies")
 	})
 })

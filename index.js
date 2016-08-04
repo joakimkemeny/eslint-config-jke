@@ -238,8 +238,10 @@ module.exports = {
 		"rest-spread-spacing": ["error", "never"],
 		"sort-imports": [
 			"error",
-			{ ignoreCase: true, ignoreMemberSort: false,
-				memberSyntaxSortOrder: ["none", "all", "multiple", "single"] }
+			{
+				ignoreCase: true, ignoreMemberSort: false,
+				memberSyntaxSortOrder: ["none", "all", "multiple", "single"]
+			}
 		],
 		"template-curly-spacing": ["error", "never"],
 		"yield-star-spacing": ["error", "after"]

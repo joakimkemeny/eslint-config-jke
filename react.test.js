@@ -18,7 +18,7 @@ describe("React", () => {
 			configFile: tempWrite.sync(JSON.stringify(conf))
 		})
 		const input = "console.log(1)"
-		const results = engine.executeOnText(input, "input").results[0].messages
+		const results = engine.executeOnText(input, "input", true).results[0].messages
 		expect(results[0].ruleId).to.equal("no-console")
 	})
 })
