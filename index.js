@@ -1,18 +1,18 @@
 module.exports = {
 
-	parserOptions: {
-		ecmaVersion: 6,
-		sourceType: "module",
-		ecmaFeatures: {
-			experimentalObjectRestSpread: true
-		}
-	},
-
 	env: {
 		es6: true
 	},
 
 	globals: {},
+
+	parserOptions: {
+		ecmaFeatures: {
+			experimentalObjectRestSpread: true
+		},
+		ecmaVersion: 6,
+		sourceType: "module"
+	},
 
 	rules: {
 
@@ -35,7 +35,6 @@ module.exports = {
 		"no-inner-declarations": "error",
 		"no-invalid-regexp": "error",
 		"no-irregular-whitespace": "error",
-		"no-negated-in-lhs": "error",
 		"no-obj-calls": "error",
 		"no-prototype-builtins": "off",
 		"no-regex-spaces": "error",
@@ -43,12 +42,13 @@ module.exports = {
 		"no-unexpected-multiline": "error",
 		"no-unreachable": "error",
 		"no-unsafe-finally": "error",
+		"no-unsafe-negation": "error",
 		"use-isnan": "error",
 		"valid-jsdoc": ["error", { prefer: { return: "returns" }, requireReturn: false }],
 		"valid-typeof": "error",
 
 		// Best Practices
-		"accessor-pairs": "error",
+		"accessor-pairs": "error",  // eslint-disable-line
 		"array-callback-return": "error",
 		"block-scoped-var": "error",
 		"complexity": ["error", { max: 20 }],
@@ -73,6 +73,7 @@ module.exports = {
 		"no-extra-label": "error",
 		"no-fallthrough": "error",
 		"no-floating-decimal": "error",
+		"no-global-assign": "error",
 		"no-implicit-coercion": "error",
 		"no-implicit-globals": "error",
 		"no-implied-eval": "error",
@@ -84,9 +85,8 @@ module.exports = {
 		"no-magic-numbers": ["error", { ignoreArrayIndexes: true }],
 		"no-multi-spaces": "error",
 		"no-multi-str": "error",
-		"no-native-reassign": "error",
-		"no-new-func": "error",
 		"no-new": "error",
+		"no-new-func": "error",
 		"no-new-wrappers": "error",
 		"no-octal": "error",
 		"no-octal-escape": "error",
@@ -95,7 +95,7 @@ module.exports = {
 		"no-redeclare": ["error", { builtinGlobals: true }],
 		"no-return-assign": ["error", "always"],
 		"no-script-url": "error",
-		"no-self-assign": "error",
+		"no-self-assign": ["error", { props: true }],
 		"no-self-compare": "error",
 		"no-sequences": "error",
 		"no-throw-literal": "error",
@@ -114,10 +114,10 @@ module.exports = {
 		"yoda": "off",
 
 		// Strict Mode
-		"strict": ["error", "safe"],
+		"strict": ["error", "safe"], // eslint-disable-line
 
 		// Variables
-		"init-declarations": "off",
+		"init-declarations": "off", // eslint-disable-line
 		"no-catch-shadow": "error",
 		"no-delete-var": "error",
 		"no-label-var": "error",
@@ -131,7 +131,7 @@ module.exports = {
 		"no-use-before-define": ["error", "nofunc"],
 
 		// Stylistic Issues
-		"array-bracket-spacing": ["error", "never"],
+		"array-bracket-spacing": ["error", "never"], // eslint-disable-line
 		"block-spacing": ["error", "always"],
 		"brace-style": ["error", "1tbs", { allowSingleLine: false }],
 		"camelcase": ["error", { properties: "always" }],
@@ -141,6 +141,7 @@ module.exports = {
 		"computed-property-spacing": ["error", "never"],
 		"consistent-this": ["error", "self"],
 		"eol-last": ["error", "unix"],
+		"func-call-spacing": ["error", "never"],
 		"func-names": "off",
 		"func-style": ["error", "declaration", { allowArrowFunctions: true }],
 		"id-blacklist": ["error", "callback", "cb", "data", "e", "err"],
@@ -159,7 +160,7 @@ module.exports = {
 		"max-statements": "off",
 		"max-statements-per-line": ["error", { max: 1 }],
 		"multiline-ternary": "off",
-		"new-cap": ["error", { newIsCap: true, capIsNew: true, properties: true }],
+		"new-cap": ["error", { capIsNew: true, newIsCap: true, properties: true }],
 		"new-parens": "error",
 		"newline-after-var": "off",
 		"newline-before-return": "off",
@@ -177,8 +178,8 @@ module.exports = {
 		"no-new-object": "error",
 		"no-plusplus": "error",
 		"no-restricted-syntax": "off",
-		"no-spaced-func": "error",
 		"no-tabs": "off",
+		"no-template-curly-in-string": "error",
 		"no-ternary": "off",
 		"no-trailing-spaces": ["error", { skipBlankLines: false }],
 		"no-underscore-dangle": "error",
@@ -190,13 +191,14 @@ module.exports = {
 		"one-var": ["error", "never"],
 		"one-var-declaration-per-line": "off",
 		"operator-assignment": ["error", "always"],
-		"operator-linebreak": ["error", "after", { overrides: { "?": "before", ":": "before" } }],
+		"operator-linebreak": ["error", "after", { overrides: { ":": "before", "?": "before" } }],
 		"padded-blocks": "off",
 		"quote-props": ["error", "consistent-as-needed"],
 		"quotes": ["error", "double", { allowTemplateLiterals: true, avoidEscape: true }],
 		"require-jsdoc": "off",
 		"semi": ["error", "never"],
 		"semi-spacing": ["error", { after: true, before: false }],
+		"sort-keys": ["error", "asc", { caseSensitive: false, natural: true }],
 		"sort-vars": ["error", { ignoreCase: true }],
 		"space-before-blocks": ["error", "always"],
 		"space-before-function-paren": ["error", { anonymous: "always", named: "never" }],
@@ -208,7 +210,7 @@ module.exports = {
 		"wrap-regex": "off",
 
 		// ECMAScript 6
-		"arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: false }],
+		"arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: false }],  // eslint-disable-line
 		"arrow-parens": ["error", "always"],
 		"arrow-spacing": ["error", { after: true, before: true }],
 		"constructor-super": "error",
@@ -238,8 +240,10 @@ module.exports = {
 		"rest-spread-spacing": ["error", "never"],
 		"sort-imports": [
 			"error",
-			{ ignoreCase: true, ignoreMemberSort: false,
-				memberSyntaxSortOrder: ["none", "all", "multiple", "single"] }
+			{
+				ignoreCase: true, ignoreMemberSort: false,
+				memberSyntaxSortOrder: ["none", "all", "multiple", "single"]
+			}
 		],
 		"template-curly-spacing": ["error", "never"],
 		"yield-star-spacing": ["error", "after"]

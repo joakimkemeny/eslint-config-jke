@@ -18,12 +18,14 @@ module.exports = {
 		"no-extra-parens": ["error", "functions"],
 
 		// Stylistic Issues
-		"jsx-quotes": ["error", "prefer-double"],
+		"jsx-quotes": ["error", "prefer-double"], // eslint-disable-line
 
 		// React
 		"react/display-name": "off",
+		"react/forbid-component-props": ["error", { forbid: ["style"] }],
 		"react/forbid-prop-types": "off",
 		"react/no-danger": "error",
+		"react/no-danger-with-children": "error",
 		"react/no-deprecated": "error",
 		"react/no-did-mount-set-state": ["error"],
 		"react/no-did-update-set-state": "error",
@@ -46,7 +48,7 @@ module.exports = {
 		"react/sort-prop-types": ["error", { callbacksLast: false, ignoreCase: true, requiredFirst: false }],
 
 		// JSX
-		"react/jsx-boolean-value": ["error", "never"],
+		"react/jsx-boolean-value": ["error", "never"], // eslint-disable-line
 		"react/jsx-closing-bracket-location": ["error", { nonEmpty: "after-props", selfClosing: "after-props" }],
 		"react/jsx-curly-spacing": ["error", "always", { allowMultiline: true, spacing: { objectLiterals: "always" } }],
 		"react/jsx-equals-spacing": ["error", "never"],
@@ -70,6 +72,6 @@ module.exports = {
 		"react/jsx-space-before-closing": ["error", "always"],
 		"react/jsx-uses-react": "error",
 		"react/jsx-uses-vars": "error",
-		"react/jsx-wrap-multilines": ["error", { declaration: true, assignment: true, return: true }]
+		"react/jsx-wrap-multilines": ["error", { assignment: true, declaration: true, return: true }]
 	}
 }
