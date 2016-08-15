@@ -14,8 +14,8 @@ describe("Index", () => {
 
 	it("should trigger an error for violation", () => {
 		const engine = new eslint.CLIEngine({
-			useEslintrc: false,
-			configFile: tempWrite.sync(JSON.stringify(conf))
+			configFile: tempWrite.sync(JSON.stringify(conf)),
+			useEslintrc: false
 		})
 		const input = "console.log(1)"
 		const results = engine.executeOnText(input, "input", true).results[0].messages

@@ -18,7 +18,7 @@ module.exports = {
 		"no-extra-parens": ["error", "functions"],
 
 		// Stylistic Issues
-		"jsx-quotes": ["error", "prefer-double"],
+		"jsx-quotes": ["error", "prefer-double"], // eslint-disable-line
 
 		// React
 		"react/display-name": "off",
@@ -48,7 +48,7 @@ module.exports = {
 		"react/sort-prop-types": ["error", { callbacksLast: false, ignoreCase: true, requiredFirst: false }],
 
 		// JSX
-		"react/jsx-boolean-value": ["error", "never"],
+		"react/jsx-boolean-value": ["error", "never"], // eslint-disable-line
 		"react/jsx-closing-bracket-location": ["error", { nonEmpty: "after-props", selfClosing: "after-props" }],
 		"react/jsx-curly-spacing": ["error", "always", { allowMultiline: true, spacing: { objectLiterals: "always" } }],
 		"react/jsx-equals-spacing": ["error", "never"],
@@ -72,6 +72,6 @@ module.exports = {
 		"react/jsx-space-before-closing": ["error", "always"],
 		"react/jsx-uses-react": "error",
 		"react/jsx-uses-vars": "error",
-		"react/jsx-wrap-multilines": ["error", { declaration: true, assignment: true, return: true }]
+		"react/jsx-wrap-multilines": ["error", { assignment: true, declaration: true, return: true }]
 	}
 }
