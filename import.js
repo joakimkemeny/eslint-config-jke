@@ -32,7 +32,7 @@ module.exports = {
 		"import/no-duplicates": "error",
 		"import/no-namespace": "off",
 		"import/order": "error",
-		"import/prefer-default-export": "error",
+		"import/prefer-default-export": "off",
 
 		// Rule from index.js conflicts with import/order, turn it off
 		"sort-imports": "off"
