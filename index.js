@@ -45,12 +45,13 @@ module.exports = {
 		"no-unsafe-negation": "error",
 		"use-isnan": "error",
 		"valid-jsdoc": ["error", { prefer: { return: "returns" }, requireReturn: false }],
-		"valid-typeof": "error",
+		"valid-typeof": ["error", { requireStringLiterals: true }],
 
 		// Best Practices
 		"accessor-pairs": "error",  // eslint-disable-line
 		"array-callback-return": "error",
 		"block-scoped-var": "error",
+		"class-methods-use-this": "error",
 		"complexity": ["error", { max: 20 }],
 		"consistent-return": "error",
 		"curly": "error",
@@ -150,8 +151,10 @@ module.exports = {
 		"indent": ["error", "tab", { SwitchCase: 1 }],
 		"key-spacing": ["error", { afterColon: true, beforeColon: false, mode: "strict" }],
 		"keyword-spacing": ["error", { after: true, before: true }],
+		"line-comment-position": "off",
 		"linebreak-style": ["error", "unix"],
 		"lines-around-comment": ["error", { beforeBlockComment: true }],
+		"lines-around-directive": ["error", "always"],
 		"max-depth": ["error", { max: 5 }],
 		"max-len": ["error", { code: 120, tabWidth: 3 }],
 		"max-lines": ["error", { max: 300, skipBlankLines: false, skipComments: false }],
@@ -232,6 +235,7 @@ module.exports = {
 			"error", { allowNamedFunctions: false, allowUnboundThis: false }
 		],
 		"prefer-const": ["error", { destructuring: "any", ignoreReadBeforeAssign: false }],
+		"prefer-numeric-literals": "error",
 		"prefer-reflect": "error",
 		"prefer-rest-params": "error",
 		"prefer-spread": "error",
@@ -245,6 +249,7 @@ module.exports = {
 				memberSyntaxSortOrder: ["none", "all", "multiple", "single"]
 			}
 		],
+		"symbol-description": "error",
 		"template-curly-spacing": ["error", "never"],
 		"yield-star-spacing": ["error", "after"]
 	}
