@@ -134,7 +134,7 @@ module.exports = {
 		"array-bracket-spacing": ["error", "never"], // eslint-disable-line
 		"block-spacing": ["error", "always"],
 		"brace-style": ["error", "1tbs", { allowSingleLine: false }],
-		"camelcase": ["error", { properties: "always" }],
+		"camelcase": ["error", { properties: "never" }],
 		"comma-dangle": ["error", "never"],
 		"comma-spacing": ["error", { after: true, before: false }],
 		"comma-style": ["error", "last"],
