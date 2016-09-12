@@ -12,3 +12,4 @@ deploy:
     tags: true
     repo: joakimkemeny/eslint-config-jke
     branch: master
+    node: '4.5.0'
