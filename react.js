@@ -37,6 +37,7 @@ module.exports = {
 		"react/no-set-state": "off",
 		"react/no-string-refs": "error",
 		"react/no-unknown-property": "error",
+		"react/no-unused-prop-types": "error",
 		"react/prefer-es6-class": ["error", "always"],
 		"react/prefer-stateless-function": "error",
 		"react/prop-types": "error",
@@ -46,6 +47,7 @@ module.exports = {
 		"react/self-closing-comp": ["error", { component: true, html: true }],
 		"react/sort-comp": "error",
 		"react/sort-prop-types": ["error", { callbacksLast: false, ignoreCase: true, requiredFirst: false }],
+		"react/style-prop-object": "error",
 
 		// JSX
 		"react/jsx-boolean-value": ["error", "never"], // eslint-disable-line
