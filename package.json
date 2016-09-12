@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-jke",
-	"version": "0.8.0",
+	"version": "0.9.0",
 	"description": "My opinionated .eslintrc as an extensible shared config",
 	"keywords": [
 		"eslint",
