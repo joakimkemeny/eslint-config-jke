@@ -19,6 +19,6 @@ describe("Import", () => {
 		})
 		const input = "require('unknown')"
 		const results = engine.executeOnText(input, "input", true).results[0].messages
-		expect(results[0].ruleId).to.equal("import/no-extraneous-dependencies")
+		expect(results[0].ruleId).to.equal("import/no-unassigned-import")
 	})
 })
