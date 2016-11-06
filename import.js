@@ -18,7 +18,11 @@ module.exports = {
 		"import/export": "error", // eslint-disable-line
 		"import/no-deprecated": "off",
 		"import/no-extraneous-dependencies": [
-			"error", { devDependencies: ["**/*.test.js"], optionalDependencies: false, peerDependencies: false }
+			"error", {
+				devDependencies: ["**/*.config.js", "**/*.story.js", "**/*.test.js", "**/*.test-e2e.js"],
+				optionalDependencies: false,
+				peerDependencies: false
+			}
 		],
 		"import/no-mutable-exports": "error",
 		"import/no-named-as-default": "error",
