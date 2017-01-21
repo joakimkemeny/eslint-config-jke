@@ -14,7 +14,7 @@ module.exports = {
 	rules: {
 
 		// Possible Errors
-		// Workaround for multiline JSX.
+		// Workaround for multi line JSX.
 		"no-extra-parens": ["error", "functions"],
 
 		// Stylistic Issues
@@ -23,7 +23,10 @@ module.exports = {
 		// React
 		"react/display-name": "off",
 		"react/forbid-component-props": ["error", { forbid: ["style"] }],
+		"react/forbid-elements": "off",
+		"react/forbid-foreign-prop-types": "error",
 		"react/forbid-prop-types": "off",
+		"react/no-array-index-key": "error",
 		"react/no-children-prop": "off",
 		"react/no-danger": "error",
 		"react/no-danger-with-children": "error",
@@ -44,12 +47,14 @@ module.exports = {
 		"react/prefer-stateless-function": "error",
 		"react/prop-types": "error",
 		"react/react-in-jsx-scope": "error",
+		"react/require-default-props": "error",
 		"react/require-optimization": "off",
 		"react/require-render-return": "error",
 		"react/self-closing-comp": ["error", { component: true, html: true }],
 		"react/sort-comp": "error",
 		"react/sort-prop-types": ["error", { callbacksLast: false, ignoreCase: true, requiredFirst: false }],
 		"react/style-prop-object": "error",
+		"react/void-dom-elements-no-children": "error",
 
 		// JSX
 		"react/jsx-boolean-value": ["error", "never"], // eslint-disable-line
@@ -71,7 +76,13 @@ module.exports = {
 		"react/jsx-no-undef": "error",
 		"react/jsx-pascal-case": ["error", { allowAllCaps: false }],
 		"react/jsx-sort-props": [
-			"error", { callbacksLast: false, ignoreCase: true, shorthandFirst: false, shorthandLast: false }
+			"error", {
+				callbacksLast: false,
+				ignoreCase: true,
+				noSortAlphabetically: false,
+				shorthandFirst: false,
+				shorthandLast: false
+			}
 		],
 		"react/jsx-space-before-closing": ["error", "always"],
 		"react/jsx-uses-react": "error",

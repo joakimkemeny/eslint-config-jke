@@ -17,6 +17,8 @@ module.exports = {
 	rules: {
 
 		// Possible Errors
+		"no-await-in-loop": "error",
+		"no-compare-neg-zero": "error",
 		"no-cond-assign": ["error", "always"],
 		"no-console": "error",
 		"no-constant-condition": "error",
@@ -95,6 +97,7 @@ module.exports = {
 		"no-proto": "error",
 		"no-redeclare": ["error", { builtinGlobals: true }],
 		"no-return-assign": ["error", "always"],
+		"no-return-await": "error",
 		"no-script-url": "error",
 		"no-self-assign": ["error", { props: true }],
 		"no-self-compare": "error",
@@ -110,6 +113,7 @@ module.exports = {
 		"no-void": "error",
 		"no-warning-comments": "error",
 		"no-with": "error",
+		"prefer-promise-reject-errors": "error",
 		"radix": ["error", "always"],
 		"vars-on-top": "error",
 		"wrap-iife": ["error", "inside"],
@@ -129,14 +133,15 @@ module.exports = {
 		"no-undef": ["error", { typeof: true }],
 		"no-undef-init": "error",
 		"no-undefined": "error",
-		"no-unused-vars": ["error", { args: "after-used", caughtErrors: "all", vars: "all" }],
-		"no-use-before-define": ["error", "nofunc"],
+		"no-unused-vars": ["error", { args: "after-used", caughtErrors: "all", ignoreRestSiblings: false, vars: "all" }],
+		"no-use-before-define": ["error", { classes: true, functions: false, variables: true }],
 
 		// Stylistic Issues
 		"array-bracket-spacing": ["error", "never"], // eslint-disable-line
 		"block-spacing": ["error", "always"],
 		"brace-style": ["error", "1tbs", { allowSingleLine: false }],
 		"camelcase": ["error", { properties: "never" }],
+		"capitalized-comments": ["error", "always", { ignoreInlineComments: true }],
 		"comma-dangle": ["error", "never"],
 		"comma-spacing": ["error", { after: true, before: false }],
 		"comma-style": ["error", "last"],
@@ -177,6 +182,7 @@ module.exports = {
 		"no-lonely-if": "error",
 		"no-mixed-operators": "error",
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"no-multi-assign": "error",
 		"no-multiple-empty-lines": ["error", { max: 1, maxBOF: 0, maxEOF: 1 }],
 		"no-negated-condition": "error",
 		"no-nested-ternary": "error",
@@ -190,6 +196,7 @@ module.exports = {
 		"no-underscore-dangle": "error",
 		"no-unneeded-ternary": "error",
 		"no-whitespace-before-property": "error",
+		"nonblock-statement-body-position": "off", // Curly braces is required
 		"object-curly-newline": "off",
 		"object-curly-spacing": ["error", "always", { arraysInObjects: true, objectsInObjects: true }],
 		"object-property-newline": "off",
@@ -200,6 +207,7 @@ module.exports = {
 		"padded-blocks": "off",
 		"quote-props": ["error", "consistent-as-needed"],
 		"quotes": ["error", "double", { allowTemplateLiterals: true, avoidEscape: true }],
+		"require-await": "error",
 		"require-jsdoc": "off",
 		"semi": ["error", "never"],
 		"semi-spacing": ["error", { after: true, before: false }],
@@ -211,6 +219,7 @@ module.exports = {
 		"space-infix-ops": "error",
 		"space-unary-ops": ["error", { nonwords: false, words: true }],
 		"spaced-comment": ["error", "always"],
+		"template-tag-spacing": ["error", "never"],
 		"unicode-bom": ["error", "never"],
 		"wrap-regex": "off",
 
@@ -237,6 +246,7 @@ module.exports = {
 			"error", { allowNamedFunctions: false, allowUnboundThis: false }
 		],
 		"prefer-const": ["error", { destructuring: "any", ignoreReadBeforeAssign: false }],
+		"prefer-destructuring": "off",
 		"prefer-numeric-literals": "error",
 		"prefer-rest-params": "error",
 		"prefer-spread": "error",

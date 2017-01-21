@@ -1,83 +1,83 @@
 {
-  "name": "eslint-config-jke",
-  "version": "0.10.1",
-  "description": "My opinionated .eslintrc as an extensible shared config",
-  "keywords": [
-    "eslint",
-    "eslintconfig"
-  ],
-  "homepage": "https://github.com/joakimkemeny/eslint-config-jke#readme",
-  "bugs": {
-    "url": "https://github.com/joakimkemeny/eslint-config-jke/issues"
-  },
-  "license": "Apache-2.0",
-  "files": [
-    "browser.js",
-    "import.js",
-    "index.js",
-    "mocha.js",
-    "node.js",
-    "react.js"
-  ],
-  "main": "index.js",
-  "author": "Joakim Kemeny",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/joakimkemeny/eslint-config-jke.git"
-  },
-  "scripts": {
-    "clean": "rimraf .nyc_output coverage",
-    "lint": "eslint .",
-    "test": "npm run test:unit && npm run lint",
-    "test:unit": "cross-env BABEL_ENV=test nyc --all mocha --compilers js:babel-register '*.test.js'"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-plugin-istanbul": "^2.0.3",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-register": "^6.18.0",
-    "chai": "^3.5.0",
-    "cross-env": "^3.1.3",
-    "eslint": "~3.9.1",
-    "eslint-plugin-import": "~2.1.0",
-    "eslint-plugin-mocha": "~4.7.0",
-    "eslint-plugin-react": "~6.6.0",
-    "is-plain-obj": "^1.1.0",
-    "mocha": "^3.1.2",
-    "nyc": "^8.4.0",
-    "rimraf": "^2.5.4",
-    "temp-write": "^2.1.0"
-  },
-  "peerDependencies": {
-    "eslint": ">=3.9.1"
-  },
-  "engines": {
-    "node": ">=6.9.1"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "env": {
-      "test": {
-        "plugins": [
-          "istanbul"
-        ]
-      }
-    }
-  },
-  "nyc": {
-    "include": [
-      "*.js"
-    ],
-    "instrument": false,
-    "reporter": [
-      "html",
-      "text-summary"
-    ],
-    "require": [
-      "babel-register"
-    ],
-    "sourceMap": false
-  }
+	"name": "eslint-config-jke",
+	"version": "0.10.1",
+	"description": "My opinionated .eslintrc as an extensible shared config",
+	"keywords": [
+		"eslint",
+		"eslintconfig"
+	],
+	"homepage": "https://github.com/joakimkemeny/eslint-config-jke#readme",
+	"bugs": {
+		"url": "https://github.com/joakimkemeny/eslint-config-jke/issues"
+	},
+	"license": "Apache-2.0",
+	"files": [
+		"browser.js",
+		"import.js",
+		"index.js",
+		"mocha.js",
+		"node.js",
+		"react.js"
+	],
+	"main": "index.js",
+	"author": "Joakim Kemeny",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joakimkemeny/eslint-config-jke.git"
+	},
+	"scripts": {
+		"clean": "rimraf .nyc_output coverage",
+		"lint": "eslint .",
+		"test": "npm run test:unit && npm run lint",
+		"test:unit": "cross-env BABEL_ENV=test nyc --all mocha --compilers js:babel-register '*.test.js'"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.0",
+		"babel-plugin-istanbul": "^4.0.0",
+		"babel-preset-es2015": "^6.24.0",
+		"babel-register": "^6.24.0",
+		"chai": "^3.5.0",
+		"cross-env": "^3.2.3",
+		"eslint": "~3.17.1",
+		"eslint-plugin-import": "~2.2.0",
+		"eslint-plugin-mocha": "~4.8.0",
+		"eslint-plugin-react": "~6.10.0",
+		"is-plain-obj": "^1.1.0",
+		"mocha": "^3.2.0",
+		"nyc": "^10.1.2",
+		"rimraf": "^2.6.1",
+		"temp-write": "^3.1.0"
+	},
+	"peerDependencies": {
+		"eslint": ">=3.17.1"
+	},
+	"engines": {
+		"node": ">=6.10.0"
+	},
+	"babel": {
+		"presets": [
+			"es2015"
+		],
+		"env": {
+			"test": {
+				"plugins": [
+					"istanbul"
+				]
+			}
+		}
+	},
+	"nyc": {
+		"include": [
+			"*.js"
+		],
+		"instrument": false,
+		"reporter": [
+			"html",
+			"text-summary"
+		],
+		"require": [
+			"babel-register"
+		],
+		"sourceMap": false
+	}
 }
