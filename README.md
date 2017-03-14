@@ -21,7 +21,7 @@ A set of rules to use in a Node environment.
 ### eslint-config-jke/react
 Extends the browser set of rules with rules for React and JSX.
 
-1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-react`
+1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-react eslint-plugin-jsx-a11y`
 2. Add `"extends": "jke/react"` to your `.eslintrc`
 
 ### eslint-config-jke/mocha
