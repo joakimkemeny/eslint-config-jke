@@ -1,7 +1,7 @@
 # eslint-config-jke
 [![NPM version](https://img.shields.io/npm/v/eslint-config-jke.svg)](https://www.npmjs.com/package/eslint-config-jke) [![Build status](https://img.shields.io/travis/joakimkemeny/eslint-config-jke/master.svg)](https://travis-ci.org/joakimkemeny/eslint-config-jke)
 
-This project provides my opinionated `.eslintrc` as an extensible shared config.
+This project provides my opinionated ESLint configuration as an extensible shared config.
 
 ## Usage
 This project provides five ESLint configurations. 
@@ -9,43 +9,41 @@ This project provides five ESLint configurations.
 ### eslint-config-jke/browser
 A set of rules to use in a browser environment.
 
-1. `npm install --save-dev eslint eslint-config-jke`
-2. Add `"extends": "jke/browser"` to your `.eslintrc`
+1. `yarn add --dev eslint eslint-config-jke`
+2. Add `"eslintConfig": { "extends": "jke/browser" }` to your `package.json`
 
 ### eslint-config-jke/node
 A set of rules to use in a Node environment.
 
-1. `npm install --save-dev eslint eslint-config-jke`
-2. Add `"extends": "jke/node"` to your `.eslintrc`
+1. `yarn add --dev eslint eslint-config-jke`
+2. Add `"eslintConfig": { "extends": "jke/node" }` to your `package.json`
 
 ### eslint-config-jke/react
 Extends the browser set of rules with rules for React and JSX.
 
-1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-react eslint-plugin-jsx-a11y`
-2. Add `"extends": "jke/react"` to your `.eslintrc`
+1. `yarn add --dev eslint eslint-config-jke eslint-plugin-react eslint-plugin-jsx-a11y`
+2. Add `"eslintConfig": { "extends": "jke/react" }` to your `package.json`
 
 ### eslint-config-jke/mocha
 An extension to the other set of rules that adds rules for Mocha tests.
 
-1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-mocha`
-2. Add one of the following rows to you `.eslintrc`
-	- `"extends": ["jke/browser", "jke/mocha"]`
-	- `"extends": ["jke/node", "jke/mocha"]`
-	- `"extends": ["jke/react", "jke/mocha"]`
+1. `yarn add --dev eslint eslint-config-jke eslint-plugin-mocha`
+2. Add one of the following rows to you `package.json`
+	- `"eslintConfig": { "extends": ["jke/browser", "jke/mocha"] }`
+	- `"eslintConfig": { "extends": ["jke/node", "jke/mocha"] }`
+	- `"eslintConfig": { "extends": ["jke/react", "jke/mocha"] }`
 
 ### eslint-config-jke/import
 An extension to the other set of rules that adds rules for import statements.
 
-1. `npm install --save-dev eslint eslint-config-jke eslint-plugin-import`
-2. Add one of the following rows to you `.eslintrc`
-	- `"extends": ["jke/browser", "jke/import"]`
-	- `"extends": ["jke/node", "jke/import"]`
-	- `"extends": ["jke/react", "jke/import"]`
+1. `yarn add --dev eslint eslint-config-jke eslint-plugin-import`
+2. Add one of the following rows to you `package.json`
+	- `"eslintConfig": { "extends": ["jke/browser", "jke/import"] }`
+	- `"eslintConfig": { "extends": ["jke/node", "jke/import"] }`
+	- `"eslintConfig": { "extends": ["jke/react", "jke/import"] }`
 
 ## Versioning
-Currently the project is in its initial development (as indicated by the 0.x version). This means that rule definitions can change at any time and your build may break. After the 1.0.0 release the project should be considered stable and will follow [semantic versioning](http://semver.org).
-
-But what does semantic versioning mean for ESLint configuration? I've decided on the following interpretation.
+This project tries to follow [semantic versioning](http://semver.org). Since it's not clear what that means for a ESLint configuration I've decided on the following interpretation.
 
 ### Patch version
 Patch versions will never effect your build. Changes may modify the project configuration, build system, documentation and other stuff that doesn't break your build. It may also deactivate rules. So if I decide that a rule is to strict, I may deactivate it in a patch release. The rule definition will still be present though since removing it may cause defaults to be activated which may break your build.
