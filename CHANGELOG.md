@@ -15,7 +15,7 @@ No unreleased changes.
 - Added ESLint configuration to use in a browser environment.
 - Added ESLint configuration to use in a Node environment.
 - Added ESLint configuration to use in a React environment.
-- Added ESLint configuration extension for Mocha tests.
+- Added ESLint configuration extension for Jest tests.
 - Added ESLint configuration extension for import statements.
 
 ## [0.x.x](https://github.com/joakimkemeny/eslint-config-jke/compare/64cd9508...0.10.1) – Pre releases

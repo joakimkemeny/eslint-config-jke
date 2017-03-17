@@ -2,9 +2,9 @@
 const eslint = require("eslint")
 const isPlainObj = require("is-plain-obj")
 const tempWrite = require("temp-write")
-const conf = require("./import")
+const conf = require("./jest")
 
-describe("Import", () => {
+describe("Jest", () => {
 
 	test("should be a valid config", () => {
 		expect(isPlainObj(conf)).toBeTruthy()
@@ -16,8 +16,8 @@ describe("Import", () => {
 			configFile: tempWrite.sync(JSON.stringify(conf)),
 			useEslintrc: false
 		})
-		const input = "require('unknown')"
+		const input = "it.skip('should work', function () {})"
 		const results = engine.executeOnText(input, "input", true).results[0].messages
-		expect(results[0].ruleId).toEqual("import/no-unassigned-import")
+		expect(results[0].ruleId).toEqual("jest/no-disabled-tests")
 	})
 })

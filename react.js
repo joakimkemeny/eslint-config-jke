@@ -44,7 +44,7 @@ module.exports = {
 		"react/no-unknown-property": "error",
 		"react/no-unused-prop-types": "error",
 		"react/prefer-es6-class": ["error", "always"],
-		"react/prefer-stateless-function": "error",
+		"react/prefer-stateless-function": "off",
 		"react/prop-types": "error",
 		"react/react-in-jsx-scope": "error",
 		"react/require-default-props": "error",
@@ -54,7 +54,7 @@ module.exports = {
 		"react/sort-comp": "error",
 		"react/sort-prop-types": ["error", { callbacksLast: false, ignoreCase: true, requiredFirst: false }],
 		"react/style-prop-object": "error",
-		"react/void-dom-elements-no-children": "error",
+		"react/void-dom-elements-no-children": "off",
 
 		// JSX
 		"react/jsx-boolean-value": ["error", "never"], // eslint-disable-line

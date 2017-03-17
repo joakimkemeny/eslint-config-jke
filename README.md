@@ -24,14 +24,14 @@ Extends the browser set of rules with rules for React and JSX.
 1. `yarn add --dev eslint eslint-config-jke eslint-plugin-react eslint-plugin-jsx-a11y`
 2. Add `"eslintConfig": { "extends": "jke/react" }` to your `package.json`
 
-### eslint-config-jke/mocha
-An extension to the other set of rules that adds rules for Mocha tests.
+### eslint-config-jke/jest
+An extension to the other set of rules that adds rules for Jest tests.
 
-1. `yarn add --dev eslint eslint-config-jke eslint-plugin-mocha`
+1. `yarn add --dev eslint eslint-config-jke eslint-plugin-jest`
 2. Add one of the following rows to you `package.json`
-	- `"eslintConfig": { "extends": ["jke/browser", "jke/mocha"] }`
-	- `"eslintConfig": { "extends": ["jke/node", "jke/mocha"] }`
-	- `"eslintConfig": { "extends": ["jke/react", "jke/mocha"] }`
+	- `"eslintConfig": { "extends": ["jke/browser", "jke/jest"] }`
+	- `"eslintConfig": { "extends": ["jke/node", "jke/jest"] }`
+	- `"eslintConfig": { "extends": ["jke/react", "jke/jest"] }`
 
 ### eslint-config-jke/import
 An extension to the other set of rules that adds rules for import statements.
@@ -69,19 +69,12 @@ This project relies on the work of great people who have created the following d
 ### Development dependencies
 [![devDependency status](https://img.shields.io/david/dev/joakimkemeny/eslint-config-jke/master.svg)](https://david-dm.org/joakimkemeny/eslint-config-jke/master#info=devDependencies)
 
-- [babel-cli](https://www.npmjs.com/package/babel-cli): Used to run Babel from the build
-- [babel-plugin-istanbul](https://www.npmjs.com/package/babel-plugin-istanbul): Used to configure Istanbul to use Babel for coverage
-- [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015): Used to configure Babel to understand ES2015
-- [babel-register](https://www.npmjs.com/package/babel-register): Used by Mocha to use Babel to understand ES2015
-- [chai](https://www.npmjs.com/package/chai): Used by Mocha to make assertions in the tests
-- [cross-env](https://www.npmjs.com/package/cross-env): Used to set environment variables cross platform in the build
 - [eslint](https://www.npmjs.com/package/eslint): Used to run this project
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import): Used to extend ESLint with rules for import statements
-- [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha): Used to extend ESLint with rules for Mocha
+- [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest): Used to extend ESLint with rules for Jest
 - [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react): Used to extend ESLint with rules for React
 - [is-plain-obj](https://www.npmjs.com/package/is-plain-obj): Used in tests to check the configuration
-- [mocha](https://www.npmjs.com/package/mocha): Used to test the configuration
-- [nyc](https://www.npmjs.com/package/nyc): Used to check test coverage
+- [jest](https://www.npmjs.com/package/jest): Used to test the configuration
 - [rimraf](https://www.npmjs.com/package/rimraf): Used to remove directories cross platform in the build
 - [temp-write](https://www.npmjs.com/package/temp-write): Used in tests to write temporary files
 

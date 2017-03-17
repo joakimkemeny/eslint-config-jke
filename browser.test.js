@@ -1,24 +1,23 @@
-/* eslint-env mocha */
-import eslint from "eslint"
-import { expect } from "chai"
-import isPlainObj from "is-plain-obj"
-import tempWrite from "temp-write"
-import conf from "./browser"
+/* eslint-env jest */
+const eslint = require("eslint")
+const isPlainObj = require("is-plain-obj")
+const tempWrite = require("temp-write")
+const conf = require("./browser")
 
 describe("Browser", () => {
 
-	it("should be a valid config", () => {
-		expect(isPlainObj(conf)).to.equal(true)
-		expect(isPlainObj(conf.rules)).to.equal(true)
+	test("should be a valid config", () => {
+		expect(isPlainObj(conf)).toBeTruthy()
+		expect(isPlainObj(conf.rules)).toBeTruthy()
 	})
 
-	it("should trigger an error for violation", () => {
+	test("should trigger an error for violation", () => {
 		const engine = new eslint.CLIEngine({
 			configFile: tempWrite.sync(JSON.stringify(conf)),
 			useEslintrc: false
 		})
 		const input = "console.log(1)"
 		const results = engine.executeOnText(input, "input", true).results[0].messages
-		expect(results[0].ruleId).to.equal("no-console")
+		expect(results[0].ruleId).toEqual("no-console")
 	})
 })
