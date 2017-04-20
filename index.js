@@ -1,16 +1,12 @@
 module.exports = {
 
-	env: {
-		es6: true
-	},
-
 	globals: {},
 
 	parserOptions: {
 		ecmaFeatures: {
 			experimentalObjectRestSpread: true
 		},
-		ecmaVersion: 6,
+		ecmaVersion: 2017,
 		sourceType: "module"
 	},
 
