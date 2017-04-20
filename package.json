@@ -32,18 +32,18 @@
 		"test:unit": "jest --coverage"
 	},
 	"devDependencies": {
-		"eslint": "~3.18.0",
+		"eslint": "~3.19.0",
 		"eslint-plugin-import": "~2.2.0",
 		"eslint-plugin-jest": "~19.0.1",
 		"eslint-plugin-jsx-a11y": "~4.0.0",
-		"eslint-plugin-react": "~6.10.0",
+		"eslint-plugin-react": "~6.10.3",
 		"is-plain-obj": "^1.1.0",
 		"jest": "^19.0.2",
 		"rimraf": "^2.6.1",
-		"temp-write": "^3.1.0"
+		"temp-write": "^3.2.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=3.18.0"
+		"eslint": ">=3.19.0"
 	},
 	"engines": {
 		"node": ">=6.10.0"
